@@ -10,7 +10,7 @@ QMAKE_EXE="${BUILD_DIR}/.apt/usr/lib/qt5/bin/qmake"
 
 mkdir ${SRC_DIR}/build
 cd ${SRC_DIR}/build
-qmake CONFIG+=release ..
+# qmake CONFIG+=release ..
 # ${QMAKE_EXE} CONFIG+=release ..
 
 # builds into src/build
