@@ -1,5 +1,19 @@
 #!/bin/bash
 # bin/compile BUILD_DIR CACHE_DIR ENV_DIR
 
-echo $1 $2 $3
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
 
+SRC_DIR="${BUILD_DIR}/src"
+QMAKE_EXE="${BUILD_DIR}/.apt/usr/lib/qt5/bin/qmake"
+
+mkdir ${SRC_DIR}/build
+cd ${SRC_DIR}/build
+${QMAKE_EXE} ..
+
+# builds into src/build
+# then moves build to BUILD_DIR/build
+# then completely deletes /src
+# probably not going to have permission to do that, but you can try, it'll be
+# uploaded from the git repo every time it is build so it should work.

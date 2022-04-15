@@ -4,6 +4,7 @@
 BUILD_DIR=$1
 QMAKE_EXE="${BUILD_DIR}/.apt/usr/lib/qt5/bin/qmake"
 
+# TODO also look for *.pro file in build directory
 if [[ -d ${BUILD_DIR}/src/ ]] && [[ -x ${QMAKE_EXE} ]]; then
   echo "QMake"
   exit 0
