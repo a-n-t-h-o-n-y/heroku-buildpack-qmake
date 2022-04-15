@@ -13,6 +13,6 @@ ls;
 
 echo "QMake Version:"
 ${QMAKE_EXE} --version
-exit 1;
+# exit 1;
 
 # which ${QMAKE_EXE} >/dev/null && echo "QMake";
