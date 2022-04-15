@@ -8,6 +8,10 @@ ENV_DIR=$3
 SRC_DIR="${BUILD_DIR}/src"
 QMAKE_EXE="${BUILD_DIR}/.apt/usr/lib/qt5/bin/qmake"
 
+echo "gcc --version:"
+gcc --version
+exit 0;
+
 mkdir ${SRC_DIR}/build
 cd ${SRC_DIR}/build
 ${QMAKE_EXE} ..
