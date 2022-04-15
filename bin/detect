@@ -1,17 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 # bin/detect BUILD_DIR
-
-# Check for a src directory and qmake bin and gcc?
-# builds into src/build
-# then moves build to BUILD_DIR/build
-# then completely deletes /src
-# probably not going to have permission to do that, but you can try, it'll be
-# uploaded from the git repo every time it is build so it should work.
 
 BUILD_DIR=$1
 QMAKE_EXE="${BUILD_DIR}/.apt/usr/lib/qt5/bin/qmake"
-
-# which ${QMAKE_EXE} >/dev/null && echo "QMake";
 
 if [ -d ${BUILD_DIR}/src/ ] && [-x ${QMAKE_EXE}]; then
   echo "QMake"
@@ -19,30 +10,3 @@ if [ -d ${BUILD_DIR}/src/ ] && [-x ${QMAKE_EXE}]; then
 else
   exit 1
 fi
-
-# Depends on heroku-buildpack-apt install of qmake
-echo "BUILD_DIR ${BUILD_DIR}";
-
-echo "ls BUILD_DIR/.apt/usr/lib"
-ls -a ${BUILD_DIR}/.apt/usr/lib
-
-
-# echo "pwd:"
-# pwd;
-
-# echo "ls:";
-# ls;
-
-# echo "ls -a ~"
-# ls -a ~
-
-# echo "PATH:"
-# echo $PATH
-
-# echo "clang --version"
-# clang --version
-
-echo "QMake Version:"
-${QMAKE_EXE} --version
-# exit 1;
-
