@@ -5,8 +5,14 @@
 echo "BUILD_DIR ${1}";
 
 QMAKE_EXE=/app/.apt/usr/lib/qt5/bin/qmake
+echo "pwd:"
+pwd;
+
+echo "ls:";
+ls;
+
 echo "QMake Version:"
 ${QMAKE_EXE} --version
-exit 0;
+exit 1;
 
 # which ${QMAKE_EXE} >/dev/null && echo "QMake";
