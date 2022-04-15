@@ -21,8 +21,8 @@ ls -a ~
 echo "PATH:"
 echo $PATH
 
-echo "clang --version"
-clang --version
+# echo "clang --version"
+# clang --version
 
 # echo "QMake Version:"
 # ${QMAKE_EXE} --version
