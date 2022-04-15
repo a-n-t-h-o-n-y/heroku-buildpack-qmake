@@ -14,6 +14,9 @@ ls;
 echo "ls -a ~"
 ls -a ~
 
+echo "PATH:"
+echo $PATH
+
 echo "QMake Version:"
 # ${QMAKE_EXE} --version
 # exit 1;
