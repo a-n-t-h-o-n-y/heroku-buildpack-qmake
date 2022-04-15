@@ -1,11 +1,12 @@
 #!/bin/sh
 # bin/detect BUILD_DIR
 
+BUILD_DIR=$1
 # Depends on heroku-buildpack-apt install of qmake
-echo "BUILD_DIR ${1}";
+echo "BUILD_DIR ${BUILD_DIR}";
 
 echo "ls BUILD_DIR/.apt/usr/lib"
-ls -a ${1}/.apt/usr/lib
+ls -a ${BUILD_DIR}/.apt/usr/lib
 
 QMAKE_EXE="${BUILD_DIR}/.apt/usr/lib/qt5/bin/qmake"
 
