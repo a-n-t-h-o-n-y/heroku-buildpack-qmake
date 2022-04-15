@@ -8,13 +8,10 @@ ENV_DIR=$3
 SRC_DIR="${BUILD_DIR}/src"
 QMAKE_EXE="${BUILD_DIR}/.apt/usr/lib/qt5/bin/qmake"
 
-echo "gcc --version:"
-g++ --version
-exit 0;
-
 mkdir ${SRC_DIR}/build
 cd ${SRC_DIR}/build
-${QMAKE_EXE} ..
+qmake CONFIG+=release ..
+# ${QMAKE_EXE} CONFIG+=release ..
 
 # builds into src/build
 # then moves build to BUILD_DIR/build
