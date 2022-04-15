@@ -4,7 +4,11 @@
 # Depends on heroku-buildpack-apt install of qmake
 echo "BUILD_DIR ${1}";
 
+echo "ls BUILD_DIR"
+ls -a ${1}
+
 QMAKE_EXE=/app/.apt/usr/lib/qt5/bin/qmake
+
 echo "pwd:"
 pwd;
 
@@ -20,7 +24,7 @@ echo $PATH
 echo "clang --version"
 clang --version
 
-echo "QMake Version:"
+# echo "QMake Version:"
 # ${QMAKE_EXE} --version
 # exit 1;
 
