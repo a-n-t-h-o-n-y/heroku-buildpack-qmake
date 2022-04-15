@@ -4,7 +4,7 @@
 BUILD_DIR=$1
 QMAKE_EXE="${BUILD_DIR}/.apt/usr/lib/qt5/bin/qmake"
 
-if [ -d ${BUILD_DIR}/src/ ] && [-x ${QMAKE_EXE}]; then
+if [[ -d ${BUILD_DIR}/src/ ]] && [[ -x ${QMAKE_EXE} ]]; then
   echo "QMake"
   exit 0
 else
