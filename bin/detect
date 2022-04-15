@@ -11,6 +11,9 @@ pwd;
 echo "ls:";
 ls;
 
+echo "ls -a ~"
+ls -a ~
+
 echo "QMake Version:"
 # ${QMAKE_EXE} --version
 # exit 1;
